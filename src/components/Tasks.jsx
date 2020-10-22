@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import Task from "./Task";
 
 const Tasks = ({ todos }) => (
@@ -10,8 +9,4 @@ const Tasks = ({ todos }) => (
   </span>
 );
 
-const mapStateToProps = (state) => ({
-  todos: state.todos
-});
-
-export default connect(mapStateToProps)(Tasks);
+export default Tasks;

@@ -34,7 +34,6 @@ class Task extends Component {
           <>
             <form
               onSubmit={(e) => {
-                e.preventDefault();
                 const text = this.state.editText;
                 handleEditSubmit(todo.id, text);
                 this.onEditSubmit(e);

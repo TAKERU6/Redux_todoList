@@ -19,7 +19,6 @@ class Form extends Component {
     return (
       <form
         onSubmit={(e) => {
-          e.preventDefault();
           const text = this.state.text;
           handleSubmit(text);
           this.onSubmit(e);
