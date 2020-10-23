@@ -24,8 +24,19 @@ class Task extends Component {
     const isDone = !!todo.done;
     return (
       <>
-        <li>{todo.text}</li>
-        <button onClick={() => handleDelete(todo.id)}>delete</button>
+        <div>
+          <span>{todo.text}</span>
+          <span></span>
+        </div>
+        <button
+          onClick={() => {
+            if (window.confirm("Are you sure?")) {
+              return handleDelete(todo.id);
+            }
+          }}
+        >
+          delete
+        </button>
         <button onClick={() => onClickEdit(todo.id, isEdit)}>edit</button>
         <button onClick={() => onClickDone(todo.id, isDone)}>
           {isDone ? "done" : "no done"}
