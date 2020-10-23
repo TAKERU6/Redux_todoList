@@ -5,11 +5,13 @@ export const CHANGE_TASK = "CHANGE_TASK";
 export const DONE_TASK = "DONE_TASK";
 
 let id = 0;
+const createdAt = new Date().toLocaleDateString();
 export const addTasks = (text) => {
   return {
     type: ADD_TASKS,
     id: id++,
-    text
+    text,
+    createdAt: createdAt
   };
 };
 

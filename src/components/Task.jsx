@@ -26,7 +26,7 @@ class Task extends Component {
       <>
         <div>
           <span>{todo.text}</span>
-          <span></span>
+          <span> ({todo.createdAt})</span>
         </div>
         <button
           onClick={() => {

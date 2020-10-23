@@ -17,7 +17,8 @@ const todos = (state = initialState, action) => {
           id: action.id,
           text: action.text,
           isEdit: false,
-          done: false
+          done: false,
+          createdAt: action.createdAt
         }
       ];
     case DELETE_TASK:
